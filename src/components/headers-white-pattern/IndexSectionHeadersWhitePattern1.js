@@ -116,7 +116,7 @@ export default function IndexSectionHeadersWhitePattern1() {
                     <a className="inline-block" href="#">
                       {" "}
                       <img
-                        className="h-8"
+                        className="w-48 h-auto"
                         src="flex-ui-assets/logos/flex-ui-green-light.svg"
                         alt
                       />{" "}
