@@ -17,6 +17,7 @@ export default function IndexSectionHeadersWhitePattern1() {
     }
   }, []);
   const [isPlaying, setIsPlaying] = React.useState(false);
+  const [navOpen, setNavOpen] = React.useState(false);
   const ref = React.useRef(null);
 
   const handleClick = () => {
@@ -105,7 +106,10 @@ export default function IndexSectionHeadersWhitePattern1() {
                 </div>{" "}
                 <div className="w-1/2 xl:w-1/3" />{" "}
               </div>{" "}
-              <button className="navbar-burger self-center xl:hidden">
+              <button
+                onClick={() => setNavOpen((prevState) => !prevState)}
+                className="navbar-burger self-center xl:hidden"
+              >
                 {" "}
                 <svg
                   width={35}
@@ -131,8 +135,9 @@ export default function IndexSectionHeadersWhitePattern1() {
               </button>{" "}
             </nav>{" "}
             <div
-              className="navbar-menu fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50"
-              style={{ display: "none" }}
+              className={`navbar-menu fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50 ${
+                navOpen ? `block` : `hidden`
+              }`}
             >
               {" "}
               <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
@@ -145,7 +150,7 @@ export default function IndexSectionHeadersWhitePattern1() {
                       {" "}
                       <img
                         className="w-48 h-auto"
-                        src="flex-ui-assets/logos/flex-ui-green-light.svg"
+                        src="https://static.shuffle.dev/uploads/files/2a/2af2f6ccb2f3ae14dd91f253dbd82596e5221a24/script-green.png"
                         alt
                       />{" "}
                     </a>{" "}
@@ -195,7 +200,10 @@ export default function IndexSectionHeadersWhitePattern1() {
                     <div className="flex flex-wrap" />{" "}
                   </div>{" "}
                 </nav>{" "}
-                <button className="navbar-close absolute top-5 p-4 right-3">
+                <button
+                  className="navbar-close absolute top-5 p-4 right-3"
+                  onClick={() => setNavOpen((prevState) => !prevState)}
+                >
                   {" "}
                   <svg
                     width={12}
