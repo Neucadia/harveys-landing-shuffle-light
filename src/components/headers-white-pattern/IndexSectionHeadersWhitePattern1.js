@@ -1,6 +1,34 @@
 import React from "react";
 
 export default function IndexSectionHeadersWhitePattern1() {
+  React.useEffect(() => {
+    var promise = ref.current.pause();
+
+    if (promise !== undefined) {
+      promise
+        .then((_) => {
+          // Autoplay started!
+        })
+        .catch((error) => {
+          // Autoplay was prevented.
+          // Show a "Play" button so that user can start playback.
+          console.log(error);
+        });
+    }
+  }, []);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const ref = React.useRef(null);
+
+  const handleClick = () => {
+    const nextIsPlaying = !isPlaying;
+    setIsPlaying(nextIsPlaying);
+
+    if (nextIsPlaying) {
+      ref.current.play();
+    } else {
+      ref.current.pause();
+    }
+  };
   return (
     <React.Fragment>
       <>
@@ -221,36 +249,68 @@ export default function IndexSectionHeadersWhitePattern1() {
                       src="flex-ui-assets/elements/dots3-blue.svg"
                       alt
                     />{" "}
-                    <svg
-                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 cursor-pointer text-green-700 hover:-text-green-800"
-                      width={64}
-                      height={64}
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {" "}
-                      <circle cx={32} cy={32} r={32} fill="currentColor" />{" "}
-                      <path
-                        className="text-white"
-                        d="M40.5 31.13L26.5 23.05C26.348 22.9622 26.1755 22.916 26 22.916C25.8245 22.916 25.652 22.9622 25.5 23.05C25.3474 23.1381 25.2208 23.265 25.133 23.4177C25.0452 23.5705 24.9993 23.7438 25 23.92V40.08C24.9993 40.2562 25.0452 40.4295 25.133 40.5822C25.2208 40.735 25.3474 40.8619 25.5 40.95C25.652 41.0378 25.8245 41.084 26 41.084C26.1755 41.084 26.348 41.0378 26.5 40.95L40.5 32.87C40.6539 32.7828 40.7819 32.6563 40.871 32.5035C40.96 32.3506 41.007 32.1769 41.007 32C41.007 31.8231 40.96 31.6494 40.871 31.4965C40.7819 31.3437 40.6539 31.2172 40.5 31.13ZM27 38.35V25.65L38 32L27 38.35Z"
-                        fill="currentColor"
-                      />{" "}
-                    </svg>{" "}
+                    <a onClick={handleClick}>
+                      {!isPlaying ? (
+                        <svg
+                          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 cursor-pointer text-green-700 hover:-text-green-800"
+                          width={64}
+                          height={64}
+                          viewBox="0 0 64 64"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          {" "}
+                          <circle
+                            cx={32}
+                            cy={32}
+                            r={32}
+                            fill="currentColor"
+                          />{" "}
+                          <path
+                            className="text-white"
+                            d="M40.5 31.13L26.5 23.05C26.348 22.9622 26.1755 22.916 26 22.916C25.8245 22.916 25.652 22.9622 25.5 23.05C25.3474 23.1381 25.2208 23.265 25.133 23.4177C25.0452 23.5705 24.9993 23.7438 25 23.92V40.08C24.9993 40.2562 25.0452 40.4295 25.133 40.5822C25.2208 40.735 25.3474 40.8619 25.5 40.95C25.652 41.0378 25.8245 41.084 26 41.084C26.1755 41.084 26.348 41.0378 26.5 40.95L40.5 32.87C40.6539 32.7828 40.7819 32.6563 40.871 32.5035C40.96 32.3506 41.007 32.1769 41.007 32C41.007 31.8231 40.96 31.6494 40.871 31.4965C40.7819 31.3437 40.6539 31.2172 40.5 31.13ZM27 38.35V25.65L38 32L27 38.35Z"
+                            fill="currentColor"
+                          />{" "}
+                        </svg>
+                      ) : (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={64}
+                          height={64}
+                          viewBox="0 0 64 64"
+                          fill="none"
+                          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 cursor-pointer text-green-700 hover:-text-green-800 bi bi-pause"
+                        >
+                          {" "}
+                          <circle
+                            cx={32}
+                            cy={32}
+                            r={32}
+                            fill="currentColor"
+                          />{" "}
+                          <g transform="translate(19, 19)">
+                            <path
+                              className="text-white"
+                              fill="currentColor"
+                              d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"
+                            />
+                          </g>
+                        </svg>
+                      )}
+                    </a>
                     <div className="relative overflow-hidden rounded-7xl">
-                      {" "}
-                      <img src="https://static.shuffle.dev/uploads/files/2a/2af2f6ccb2f3ae14dd91f253dbd82596e5221a24/Screen-Shot-2024-09-12-at-12-19-20-PM.jpg" />{" "}
                       <video
-                        className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-h-full min-w-full max-w-none"
-                        poster="https://static.shuffle.dev/uploads/files/2a/2af2f6ccb2f3ae14dd91f253dbd82596e5221a24/Screen-Shot-2024-09-12-at-12-19-20-PM.jpg"
                         muted
+                        loop
+                        poster="https://static.shuffle.dev/uploads/files/cc/cce6580999c8067e23bb4a662dea535a74b463e5/Screen-Shot-2024-09-12-at-12-19-20-PM.jpg"
+                        id="bgvid"
+                        ref={ref}
+                        onPlay={() => setIsPlaying(true)}
+                        onPause={() => setIsPlaying(false)}
                       >
-                        {" "}
-                        <source
-                          src="https://videos.pexels.com/video-files/4739711/4739711-uhd_2560_1440_30fps.mp4"
-                          type="video/mp4"
-                        />{" "}
-                      </video>{" "}
+                        <source src="bg.webm" type="video/webm" />
+                        <source src="bg.mp4" type="video/mp4" />
+                      </video>
                     </div>{" "}
                   </div>{" "}
                 </div>{" "}
