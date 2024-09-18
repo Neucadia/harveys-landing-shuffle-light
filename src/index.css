@@ -5,8 +5,22 @@
 li > ul {
   visibility: hidden;
   flex-direction: column;
+  position: relative;
+  z-index: 1000;
 }
 
 li > a:focus ~ ul {
   visibility: visible;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+li > a ~ ul > li {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  border-top: 1px solid rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-bottom: 1px solid rgba(243, 244, 246, var(--tw-bg-opacity));
 }

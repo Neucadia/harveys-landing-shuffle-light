@@ -179,7 +179,7 @@ const menu = [
     children: [
       {
         id: 5,
-        title: "Hours (currently closed for the season)",
+        title: "Hours",
         url: "/#",
       },
       {
@@ -219,7 +219,7 @@ export default function IndexSectionHeadersWhitePattern1() {
   const linkTransformer = (menuItem) => {
     return (
       <a
-        className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+        className="text-coolGray-500 hover:text-coolGray-900 font-medium p-2 whitespace-nowrap block w-full"
         href={menuItem.url}
       >
         {menuItem.title}
@@ -241,7 +241,7 @@ export default function IndexSectionHeadersWhitePattern1() {
     <React.Fragment>
       <>
         <section
-          className="relative bg-white overflow-hidden "
+          className="relative bg-white"
           style={{
             backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
             backgroundPosition: "center",
@@ -392,7 +392,7 @@ export default function IndexSectionHeadersWhitePattern1() {
               </div>{" "}
             </div>
           </div>{" "}
-          <div className="py-20 md:py-28">
+          <div className="py-20 md:pb-28 md:pt-0 xl:-m-80">
             {" "}
             <div className="container px-4 mx-auto">
               {" "}
