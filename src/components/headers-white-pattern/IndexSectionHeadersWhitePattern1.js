@@ -1,4 +1,200 @@
 import React from "react";
+import { ReactNestedMenu } from "react-nested-menu";
+
+const menu = [
+  {
+    id: 1,
+    title: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
+    title: "Store",
+    url: "/#",
+    children: [
+      {
+        id: 3,
+        title: "Men",
+        url: "/#",
+      },
+      {
+        id: 4,
+        title: "Women",
+        url: "/#",
+      },
+      {
+        id: 5,
+        title: "Kids",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Footwear",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Pet",
+        url: "/#",
+      },
+      {
+        id: 8,
+        title: "Brands",
+        url: "/#",
+      },
+      {
+        id: 9,
+        title: "Events",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Seed",
+    url: "/#",
+    children: [
+      {
+        id: 3,
+        title: "Corn",
+        url: "/#",
+      },
+      {
+        id: 4,
+        title: "Soybeans",
+        url: "/#",
+      },
+      {
+        id: 5,
+        title: "Wheat",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Cover Crop",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Pasture Mix",
+        url: "/#",
+      },
+      {
+        id: 8,
+        title: "Food Plot",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    title: "Feed",
+    url: "/#",
+    children: [
+      {
+        id: 3,
+        title: "Equine",
+        url: "/#",
+      },
+      {
+        id: 4,
+        title: "Swine",
+        url: "/#",
+      },
+      {
+        id: 5,
+        title: "Calf",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Sheep",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Goat",
+        url: "/#",
+      },
+      {
+        id: 8,
+        title: "Poultry",
+        url: "/#",
+      },
+      {
+        id: 9,
+        title: "Beef",
+        url: "/#",
+      },
+      {
+        id: 10,
+        title: "Dairy",
+        url: "/#",
+      },
+      {
+        id: 11,
+        title: "Pet",
+        url: "/#",
+      },
+      {
+        id: 12,
+        title: "Rabbit",
+        url: "/#",
+      },
+      {
+        id: 13,
+        title: "Lactation",
+        url: "/#",
+      },
+      {
+        id: 14,
+        title: "Full truckloads",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    title: "Commodities",
+    url: "/#",
+    children: [
+      {
+        id: 8,
+        title: "About",
+        url: "/#",
+      },
+      {
+        id: 9,
+        title: "Products",
+        url: "/#",
+      },
+      {
+        id: 10,
+        title: "Team",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    title: "Garden Center",
+    url: "/#",
+    children: [
+      {
+        id: 5,
+        title: "Hours (currently closed for the season)",
+        url: "/#",
+      },
+      {
+        id: 6,
+        title: "Fertilizer",
+        url: "/#",
+      },
+      {
+        id: 7,
+        title: "Soil",
+        url: "/#",
+      },
+    ],
+  },
+];
 
 export default function IndexSectionHeadersWhitePattern1() {
   React.useEffect(() => {
@@ -19,6 +215,17 @@ export default function IndexSectionHeadersWhitePattern1() {
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [navOpen, setNavOpen] = React.useState(false);
   const ref = React.useRef(null);
+
+  const linkTransformer = (menuItem) => {
+    return (
+      <a
+        className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+        href={menuItem.url}
+      >
+        {menuItem.title}
+      </a>
+    );
+  };
 
   const handleClick = () => {
     const nextIsPlaying = !isPlaying;
@@ -45,7 +252,7 @@ export default function IndexSectionHeadersWhitePattern1() {
             {" "}
             <nav className="flex justify-between p-6 px-4">
               {" "}
-              <div className="flex justify-between items-center w-full">
+              <div className="flex justify-between items-start w-full">
                 {" "}
                 <div className="w-1/2 xl:w-1/3">
                   {" "}
@@ -58,51 +265,14 @@ export default function IndexSectionHeadersWhitePattern1() {
                     />{" "}
                   </a>{" "}
                 </div>{" "}
-                <div className="w-1/2">
-                  {" "}
-                  <ul className="hidden xl:flex xl:justify-center">
-                    {" "}
-                    <li className="mr-12">
-                      <a
-                        className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                        href="#"
-                      >
-                        Store
-                      </a>
-                    </li>{" "}
-                    <li className="mr-12">
-                      <a
-                        className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                        href="#"
-                      >
-                        Commodities
-                      </a>
-                    </li>{" "}
-                    <li className="mr-12">
-                      <a
-                        className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                        href="#"
-                      >
-                        Seed
-                      </a>
-                    </li>{" "}
-                    <li className="mr-12">
-                      <a
-                        className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                        href="#"
-                      >
-                        Feed
-                      </a>
-                    </li>{" "}
-                    <li>
-                      <a
-                        className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                        href="#"
-                      >
-                        Garden Center
-                      </a>
-                    </li>{" "}
-                  </ul>{" "}
+                <div className="w-1/2 xl:w-full">
+                  <ReactNestedMenu
+                    navParentClassname="hidden xl:flex xl:justify-center"
+                    navTopLevelParentClassname="hidden xl:flex xl:justify-center"
+                    navChildClassname="flex-1 text-center px-4"
+                    linkTransformer={linkTransformer}
+                    menuData={menu}
+                  />
                 </div>{" "}
                 <div className="w-1/2 xl:w-1/3" />{" "}
               </div>{" "}
