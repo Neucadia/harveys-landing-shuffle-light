@@ -267,7 +267,7 @@ export default function IndexSectionHeadersWhitePattern1() {
                 </div>{" "}
                 <div className="w-1/2 xl:w-full">
                   <ReactNestedMenu
-                    navParentClassname="hidden xl:flex xl:justify-center"
+                    navParentClassname="nested hidden xl:flex xl:justify-center"
                     navTopLevelParentClassname="hidden xl:flex xl:justify-center"
                     navChildClassname="flex-1 text-center px-4"
                     linkTransformer={linkTransformer}
@@ -306,7 +306,7 @@ export default function IndexSectionHeadersWhitePattern1() {
             </nav>{" "}
             <div
               className={`navbar-menu fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50 ${
-                navOpen ? `block` : `hidden`
+                navOpen ? `visible` : `invisible`
               }`}
             >
               {" "}
@@ -324,49 +324,13 @@ export default function IndexSectionHeadersWhitePattern1() {
                         alt
                       />{" "}
                     </a>{" "}
-                    <ul className="py-6">
-                      {" "}
-                      <li>
-                        <a
-                          className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                          href="#"
-                        >
-                          Store
-                        </a>
-                      </li>{" "}
-                      <li>
-                        <a
-                          className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                          href="#"
-                        >
-                          Commodities
-                        </a>
-                      </li>{" "}
-                      <li>
-                        <a
-                          className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                          href="#"
-                        >
-                          Feed
-                        </a>
-                      </li>{" "}
-                      <li>
-                        <a
-                          className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                          href="#"
-                        >
-                          Seed
-                        </a>
-                      </li>{" "}
-                      <li>
-                        <a
-                          className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                          href="#"
-                        >
-                          Garden Center
-                        </a>
-                      </li>{" "}
-                    </ul>{" "}
+                    <ReactNestedMenu
+                      navParentClassname="not-nested"
+                      navTopLevelParentClassname="vertical menu"
+                      navChildClassname="ml-8"
+                      linkTransformer={linkTransformer}
+                      menuData={menu}
+                    />
                     <div className="flex flex-wrap" />{" "}
                   </div>{" "}
                 </nav>{" "}
@@ -392,7 +356,7 @@ export default function IndexSectionHeadersWhitePattern1() {
               </div>{" "}
             </div>
           </div>{" "}
-          <div className="py-20 md:pb-28 md:pt-0 xl:-m-80">
+          <div className="py-20 md:pb-28 md:pt-0 xl:-mt-80">
             {" "}
             <div className="container px-4 mx-auto">
               {" "}
