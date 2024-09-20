@@ -389,7 +389,7 @@ export default function IndexSectionHeadersWhitePattern1() {
                     <a onClick={handleClick}>
                       {!isPlaying ? (
                         <svg
-                          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 cursor-pointer text-green-700 hover:-text-green-800"
+                          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 cursor-pointer text-green-700 hover:-text-green-800"
                           width={64}
                           height={64}
                           viewBox="0 0 64 64"
