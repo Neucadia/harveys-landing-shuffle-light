@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.fill-white {
+  fill: #fff;
+}
+
 .nested > li > ul {
   visibility: hidden;
   flex-direction: column;
