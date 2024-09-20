@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactNestedMenu } from "react-nested-menu";
+import Nav from "../nav/nav";
 
 const menu = [
   {
@@ -266,13 +267,7 @@ export default function IndexSectionHeadersWhitePattern1() {
                   </a>{" "}
                 </div>{" "}
                 <div className="w-1/2 xl:w-full">
-                  <ReactNestedMenu
-                    navParentClassname="nested hidden xl:flex xl:justify-center"
-                    navTopLevelParentClassname="hidden xl:flex xl:justify-center"
-                    navChildClassname="flex-1 text-center px-4"
-                    linkTransformer={linkTransformer}
-                    menuData={menu}
-                  />
+                  <Nav />
                 </div>{" "}
                 <div className="w-1/2 xl:w-1/3" />{" "}
               </div>{" "}
@@ -306,7 +301,7 @@ export default function IndexSectionHeadersWhitePattern1() {
             </nav>{" "}
             <div
               className={`navbar-menu fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50 ${
-                navOpen ? `visible` : `invisible`
+                navOpen ? `block` : `hidden`
               }`}
             >
               {" "}
