@@ -256,13 +256,13 @@ export default function IndexSectionHeadersWhitePattern1() {
               <div className="flex justify-between items-start w-full">
                 {" "}
                 <div className="w-1/2 xl:w-1/3">
-                  {" "}
+                  {/* eslint-disable-next-line */}
                   <a className="block max-w-max" href="#">
                     {" "}
                     <img
                       className="h-8"
                       src="https://static.shuffle.dev/uploads/files/2a/2af2f6ccb2f3ae14dd91f253dbd82596e5221a24/script-green.png"
-                      alt
+                      alt="Harvey's"
                     />{" "}
                   </a>{" "}
                 </div>{" "}
@@ -310,13 +310,13 @@ export default function IndexSectionHeadersWhitePattern1() {
                 <nav className="relative p-6 h-full overflow-y-auto">
                   {" "}
                   <div className="flex flex-col justify-between h-full">
-                    {" "}
+                    {/* eslint-disable-next-line */}
                     <a className="inline-block" href="#">
                       {" "}
                       <img
                         className="w-48 h-auto"
                         src="https://static.shuffle.dev/uploads/files/2a/2af2f6ccb2f3ae14dd91f253dbd82596e5221a24/script-green.png"
-                        alt
+                        alt="Harvey's"
                       />{" "}
                     </a>{" "}
                     <ReactNestedMenu
@@ -379,12 +379,12 @@ export default function IndexSectionHeadersWhitePattern1() {
                     <img
                       className="absolute z-10 -left-14 -top-12 w-28 md:w-auto"
                       src="flex-ui-assets/elements/circle3-yellow.svg"
-                      alt
+                      alt="Circle"
                     />{" "}
                     <img
                       className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto"
                       src="flex-ui-assets/elements/dots3-blue.svg"
-                      alt
+                      alt="Dots"
                     />{" "}
                     <a onClick={handleClick}>
                       {!isPlaying ? (
