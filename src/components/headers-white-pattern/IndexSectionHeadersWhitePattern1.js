@@ -386,6 +386,7 @@ export default function IndexSectionHeadersWhitePattern1() {
                       src="flex-ui-assets/elements/dots3-blue.svg"
                       alt="Dots"
                     />{" "}
+                    {/* eslint-disable-next-line */}
                     <a onClick={handleClick}>
                       {!isPlaying ? (
                         <svg
