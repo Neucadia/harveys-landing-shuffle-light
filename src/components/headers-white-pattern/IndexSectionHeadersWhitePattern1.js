@@ -260,8 +260,8 @@ export default function IndexSectionHeadersWhitePattern1() {
                   <a className="block max-w-max" href="#">
                     {" "}
                     <img
-                      className="h-8"
-                      src="https://static.shuffle.dev/uploads/files/2a/2af2f6ccb2f3ae14dd91f253dbd82596e5221a24/script-green.png"
+                      className="h-16"
+                      src="flex-ui-assets/logos/harveys-script-green.svg"
                       alt="Harvey's"
                     />{" "}
                   </a>{" "}
@@ -315,7 +315,7 @@ export default function IndexSectionHeadersWhitePattern1() {
                       {" "}
                       <img
                         className="w-48 h-auto"
-                        src="https://static.shuffle.dev/uploads/files/2a/2af2f6ccb2f3ae14dd91f253dbd82596e5221a24/script-green.png"
+                        src="flex-ui-assets/logos/harveys-script-green.svg"
                         alt="Harvey's"
                       />{" "}
                     </a>{" "}
