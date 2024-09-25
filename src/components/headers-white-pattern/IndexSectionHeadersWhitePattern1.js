@@ -197,6 +197,15 @@ const menu = [
   },
 ];
 
+const logos = [
+  {
+    url: "flex-ui-assets/logos/harveys-tiller-green.svg",
+  },
+  {
+    url: "flex-ui-assets/logos/harveys-script-green.svg",
+  },
+];
+
 export default function IndexSectionHeadersWhitePattern1() {
   React.useEffect(() => {
     var promise = ref.current.pause();
@@ -215,6 +224,7 @@ export default function IndexSectionHeadersWhitePattern1() {
   }, []);
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [navOpen, setNavOpen] = React.useState(false);
+  const [logoURL, setLogoURL] = React.useState(logos[0].url);
   const ref = React.useRef(null);
 
   const linkTransformer = (menuItem) => {
@@ -257,13 +267,18 @@ export default function IndexSectionHeadersWhitePattern1() {
                 {" "}
                 <div className="w-1/2 xl:w-1/3">
                   {/* eslint-disable-next-line */}
-                  <a className="block max-w-max" href="#">
+                  <a
+                    className="block max-w-max"
+                    href="#"
+                    onClick={() =>
+                      setLogoURL(
+                        logos[logos.findIndex((logo) => logo.url !== logoURL)]
+                          .url
+                      )
+                    }
+                  >
                     {" "}
-                    <img
-                      className="h-16"
-                      src="flex-ui-assets/logos/harveys-script-green.svg"
-                      alt="Harvey's"
-                    />{" "}
+                    <img className="h-16" src={logoURL} alt="Harvey's" />{" "}
                   </a>{" "}
                 </div>{" "}
                 <div className="w-1/2 xl:w-full">
@@ -311,11 +326,20 @@ export default function IndexSectionHeadersWhitePattern1() {
                   {" "}
                   <div className="flex flex-col justify-between h-full">
                     {/* eslint-disable-next-line */}
-                    <a className="inline-block" href="#">
+                    <a
+                      className="inline-block"
+                      href="#"
+                      onClick={() =>
+                        setLogoURL(
+                          logos[logos.findIndex((logo) => logo.url !== logoURL)]
+                            .url
+                        )
+                      }
+                    >
                       {" "}
                       <img
                         className="w-48 h-auto"
-                        src="flex-ui-assets/logos/harveys-script-green.svg"
+                        src={logoURL}
                         alt="Harvey's"
                       />{" "}
                     </a>{" "}
