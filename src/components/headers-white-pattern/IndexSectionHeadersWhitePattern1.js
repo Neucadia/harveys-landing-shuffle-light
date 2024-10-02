@@ -278,7 +278,11 @@ export default function IndexSectionHeadersWhitePattern1() {
                     }
                   >
                     {" "}
-                    <img className="h-16" src={logoURL} alt="Harvey's" />{" "}
+                    <img
+                      className="mt-1 p-2 w-36"
+                      src={logoURL}
+                      alt="Harvey's"
+                    />{" "}
                   </a>{" "}
                 </div>{" "}
                 <div className="w-1/2 xl:w-full">
