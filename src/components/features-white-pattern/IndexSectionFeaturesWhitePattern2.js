@@ -38,6 +38,7 @@ export default function IndexSectionFeaturesWhitePattern2() {
             <div className="flex flex-wrap -mx-4">
               <div className="w-full md:w-1/2 lg:w-1/3 px-4">
                 <div className="h-full p-8 text-center rounded-md hover:shadow-xl transition duration-200 hover:bg-white">
+                  {/* eslint-disable-next-line */}
                   <a
                     onClick={() =>
                       setActiveLogo(
@@ -62,6 +63,7 @@ export default function IndexSectionFeaturesWhitePattern2() {
               </div>
               <div className="w-full md:w-1/2 lg:w-1/3 px-4">
                 <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+                  {/* eslint-disable-next-line */}
                   <a
                     onClick={() =>
                       setActiveLogo(
@@ -86,6 +88,7 @@ export default function IndexSectionFeaturesWhitePattern2() {
               </div>
               <div className="w-full md:w-1/2 lg:w-1/3 px-4">
                 <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+                  {/* eslint-disable-next-line */}
                   <a
                     onClick={() =>
                       setActiveLogo(
@@ -110,6 +113,7 @@ export default function IndexSectionFeaturesWhitePattern2() {
               </div>
               <div className="w-full md:w-1/2 lg:w-1/3 px-4">
                 <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+                  {/* eslint-disable-next-line */}
                   <a
                     onClick={() =>
                       setActiveLogo(
@@ -134,6 +138,7 @@ export default function IndexSectionFeaturesWhitePattern2() {
               </div>
               <div className="w-full md:w-1/2 lg:w-1/3 px-4">
                 <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+                  {/* eslint-disable-next-line */}
                   <a
                     onClick={() =>
                       setActiveLogo(
